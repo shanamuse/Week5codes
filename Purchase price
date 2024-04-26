@@ -1,0 +1,36 @@
+For example:
+
+Input	Result
+5000
+Input the total purchase price:
+Discount is: 250.00
+Payable Total is: 4750.00
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    float purchaseAmount, discount, payableTotal;
+
+    printf("Input the total purchase price:\n");
+    scanf("%f", &purchaseAmount);
+
+    if (purchaseAmount < 2500) {
+        discount = 0;
+    } else if (purchaseAmount >= 2500 && purchaseAmount <= 6499) {
+        discount = purchaseAmount * 0.05;
+    } else if (purchaseAmount >= 6500 && purchaseAmount <= 10000) {
+        discount = purchaseAmount * 0.10;
+    } else {
+        discount = purchaseAmount * 0.125;
+    }
+
+    payableTotal = purchaseAmount - discount;
+
+    printf("Discount is: %.2f\n", discount);
+    printf("Payable Total is: %.2f\n", payableTotal);
+
+    return 0;
+}
