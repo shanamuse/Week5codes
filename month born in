@@ -1,0 +1,38 @@
+For example:
+
+Input	Result
+August
+
+
+What month were you born in?
+August in New Zealand is in Winter.
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char mon[32];
+    printf("What month were you born in?\n");
+    scanf(" %s", mon);
+    
+    if (strcmp(mon, "June") == 0 || strcmp(mon, "July") == 0 || strcmp(mon, "August") == 0)
+    {
+        printf("%s in New Zealand is in Winter.\n", mon);
+    }
+    else if (strcmp(mon, "March") == 0 || strcmp(mon, "April") == 0 || strcmp(mon, "May") == 0){
+        printf("%s in New Zealand is in Autumn.\n", mon);
+    }
+    else if (strcmp(mon, "September") == 0 || strcmp(mon, "October") == 0 || strcmp(mon, "November") == 0){
+        printf("%s in New Zealand is in Spring.\n", mon);
+    }
+    else if (strcmp(mon, "December") == 0 || strcmp(mon, "January") == 0 || strcmp(mon, "February") == 0){
+        printf("%s in New Zealand is in Summer.\n", mon);
+    }
+    else {
+        printf("%s is not a month!\n", mon);
+    }
+    return 0;
+}
