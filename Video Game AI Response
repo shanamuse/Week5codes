@@ -1,0 +1,43 @@
+For example:
+
+Input	Result
+h
+c
+Is the player's health low or high (l/h)?
+Where is the player, close or far (c/f)?
+
+The AI should call for reinforcements.
+
+
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    char health, location;
+
+    printf("Is the player's health low or high (l/h)?\n");
+    scanf(" %c", &health);
+
+    printf("Where is the player, close or far (c/f)?\n");
+    scanf(" %c", &location);
+
+    if (health == 'h') {
+        if (location == 'c') {
+            printf("\nThe AI should call for reinforcements.\n");
+        } else if (location == 'f') {
+            printf("\nThe AI should go to sleep.\n");
+        }
+    } else if (health == 'l') {
+        if (location == 'c') {
+            printf("\nThe AI should attack.\n");
+        } else if (location == 'f') {
+            printf("\nThe AI should start searching.\n");
+        }
+    } else {
+        printf("\nInvalid input!\n");
+    }
+
+    return 0;
+}
