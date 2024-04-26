@@ -1,0 +1,35 @@
+For example:
+
+Input	Result
+80.5
+y
+What did you score in Practical Test 1?
+Did you submit Reporting Journal – Stage 1 (y/n)?
+
+Well done! Keep studying well...
+
+
+
+
+
+#include <stdio.h>
+int main(){
+    printf("What did you score in Practical Test 1?\n");
+    printf("Did you submit Reporting Journal – Stage 1 (y/n)?\n\n");
+    float score;
+    char input;
+    scanf("%f ", &score);
+    scanf("%c",&input);
+    if(score < 50 && input == 'y'){
+        printf("Practice more programming exercises!\n");
+    }
+    else if(score < 50 && input == 'n'){
+        printf("More practice and keep a journal!!!");
+    }
+    else if(score >= 50 && input == 'y'){
+        printf("Well done! Keep studying well...");
+    }
+    else if(score >= 50 && input == 'n'){
+        printf("Oh no, you should keep a journal!");
+    }
+}
