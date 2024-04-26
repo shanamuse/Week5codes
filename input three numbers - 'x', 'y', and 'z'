@@ -1,0 +1,38 @@
+For example:
+
+Input	Result
+35
+32
+23
+x:
+y:
+z:
+Computed: 2778
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+
+    int x, y, z;
+    
+    printf("x:\n");
+    scanf("%d", &x);
+    printf("y:\n");
+    scanf("%d", &y);
+    printf("z:\n");
+    scanf("%d", &z);
+
+    int a = x * x;
+    int b = y * y;
+    int c = z * z;
+
+    int result = a + b + c;
+
+    printf("Computed: %d\n", result);
+
+    return 0;
+}
