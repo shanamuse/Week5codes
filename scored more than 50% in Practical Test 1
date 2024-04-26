@@ -1,0 +1,28 @@
+For example:
+
+Input	Result
+y
+Did you score more than 50% in Practical Test 1 (y/n)?
+Great! Hope you score well in Practical Test 2!
+
+
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    char response; 
+    printf("Did you score more than 50%% in Practical Test 1 (y/n)?\n");
+    scanf(" %c", &response); 
+
+    if (response == 'Y' || response == 'y') {
+        printf("Great! Hope you score well in Practical Test 2!\n");
+    } else if (response == 'N' || response == 'n') {
+        printf("Oh no! Hopefully your Practical Test 2 result is better!\n");
+    } else {
+        printf("Your response makes no sense!\n");
+    }
+
+    return 0;
+}
