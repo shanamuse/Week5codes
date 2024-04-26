@@ -1,0 +1,33 @@
+For example:
+
+Input	Result
+25
+How many hours did you spend studying for the test?
+25 hours is probably not enough!
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    printf("How many hours did you spend studying for the test?\n");
+    if (a > 0 && a < 26)
+    {
+        printf("%d hours is probably not enough!\n", a);
+    }
+    else if (a > 40)
+    {
+        printf("Excellent, you should be well prepared for the test!");
+    }
+    if (a < 0)
+    {
+        printf("Invalid, you cannot have studied a negative number of hours!\n");
+    }
+
+
+}
