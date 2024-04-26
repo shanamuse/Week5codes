@@ -1,0 +1,26 @@
+For example:
+
+Input	Result
+f
+Input a character:
+The input was alphabetic.
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("Input a character: \n");
+    scanf("%c", &ch);
+
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+        printf("The input was alphabetic.\n");
+    } else {
+        printf("The input was not alphabetic.\n");
+    }
+
+    return 0;
+}
