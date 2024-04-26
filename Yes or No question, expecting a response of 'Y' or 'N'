@@ -1,0 +1,30 @@
+For example:
+
+Input	Result
+Y
+Question (Y/N)?
+User response: Yes
+
+
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    char userInput;
+
+    printf("Question (Y/N)?\n");
+    scanf(" %c", &userInput);
+
+    if (userInput == 'Y' || userInput == 'y') {
+        printf("User response: Yes\n");
+    } else if (userInput == 'N' || userInput == 'n') {
+        printf("User response: No\n");
+    } else {
+        printf("User response: Invalid input!\n");
+    }
+
+    return 0; 
+    
+}
