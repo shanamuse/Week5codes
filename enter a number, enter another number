@@ -1,0 +1,35 @@
+Input	Result
+25
+62
+Please enter a number:
+Please enter another number:
+62 is bigger than 25.
+
+
+
+#include <stdio.h>
+int main (void)
+
+{
+    int a;
+    int b;
+    
+    printf("Please enter a number:\n");
+    scanf("%d", &a);
+    printf("Please enter another number:\n");
+    scanf("%d", &b);
+   
+    
+    if(a > b)
+    {
+        printf("%d is bigger than %d.\n", a, b);
+    }
+    else if (b > a)
+    {
+        printf("%d is bigger than %d.\n", b, a);
+    }
+    else if (a == b)
+    {
+        printf("The same number (%d) was entered twice.", a);
+    }
+}
