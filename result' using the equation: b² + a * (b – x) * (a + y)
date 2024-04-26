@@ -1,0 +1,33 @@
+For example:
+
+Input	Result
+2
+5
+Enter the x value:
+Enter the y value:
+Computed: 799.000000
+
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    double x, y;  
+    double a, b, result;  
+
+    printf("Enter the x value:\n");
+    scanf("%lf", &x);
+    printf("Enter the y value:\n");
+    scanf("%lf", &y);
+
+    a = x * y;
+
+    b = x + y;
+
+    result = (b * b) + a * (b - x) * (a + y);
+
+    printf("Computed: %.6f\n", result);
+
+    return 0;
+}
