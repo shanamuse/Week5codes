@@ -1,0 +1,28 @@
+For example:
+
+Input	Result
+s
+Which hero is your favourite, Superman (S) or Batman (B)?
+The user's favourite super hero is Superman
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    char choice; 
+
+    printf("Which hero is your favourite, Superman (S) or Batman (B)?\n");
+    scanf(" %c", &choice);
+
+    if (choice == 'S' || choice == 's') {
+        printf("The user's favourite super hero is Superman\n");
+    } else if (choice == 'B' || choice == 'b') {
+        printf("The user's favourite super hero is Batman\n");
+    } else {
+        printf("Invalid response!\n");
+    }
+
+    return 0; 
+}
