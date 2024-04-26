@@ -1,0 +1,52 @@
+For example:
+
+Input	Result
+85
+85
+10
+Enter the first angle (in degrees):
+Enter the second angle (in degrees):
+Enter the third angle (in degrees):
+
+85, 85, and 10 is a valid triangle.
+36
+56
+95
+Enter the first angle (in degrees):
+Enter the second angle (in degrees):
+Enter the third angle (in degrees):
+
+36, 56, and 95 is not a valid triangle.
+
+
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    int angle1, angle2, angle3;
+
+    printf("Enter the first angle (in degrees):\n");
+    scanf("%d", &angle1);
+
+    printf("Enter the second angle (in degrees):\n");
+    scanf("%d", &angle2);
+
+    printf("Enter the third angle (in degrees):\n");
+    scanf("%d", &angle3);
+
+    int sum_of_angles = angle1 + angle2 + angle3;
+
+    if (sum_of_angles == 180 && angle1 > 0 && angle2 > 0 && angle3 > 0) {
+        if (angle1 == 90 || angle2 == 90 || angle3 == 90) {
+            printf("\n%d, %d, and %d is a valid right-angle triangle.\n", angle1, angle2, angle3);
+        } else {
+            printf("\n%d, %d, and %d is a valid triangle.\n", angle1, angle2, angle3);
+        }
+    } else {
+        printf("\n%d, %d, and %d is not a valid triangle.\n", angle1, angle2, angle3);
+    }
+
+    return 0;
+}
