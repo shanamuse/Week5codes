@@ -1,0 +1,59 @@
+For example:
+
+Input	Result
+35
+32
++
+Input left operand?
+Input right operand?
+Operation (+,-,*,/)?
+The result is
+67
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    double left_operand, right_operand, result;
+    char operation;
+
+    printf("Input left operand?\n");
+    scanf("%lf", &left_operand);
+
+    printf("Input right operand?\n");
+    scanf("%lf", &right_operand);
+
+    printf("Operation (+,-,*,/)?\n");
+    scanf(" %c", &operation);
+
+    switch (operation) {
+        case '+':
+            result = left_operand + right_operand;
+            break;
+        case '-':
+            result = left_operand - right_operand;
+            break;
+        case '*':
+            result = left_operand * right_operand;
+            break;
+        case '/':
+            if (right_operand == 0) {
+                printf("Error: Division by zero is not allowed.\n");
+                return 1; 
+            }
+            result = left_operand / right_operand;
+            break;
+        default:
+            printf("Error: Invalid operation selected.\n");
+            return 1; 
+    }
+
+    if (result == (int)result) {
+        printf("The result is\n%d\n", (int)result);
+    } else {
+        printf("The result is\n%g\n", result);
+    }
+
+    return 0;
+}
