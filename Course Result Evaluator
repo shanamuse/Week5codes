@@ -1,0 +1,40 @@
+For example:
+
+Input	Result
+y
+n
+y
+
+At least 80% lab tutorial attendance (y/n)?
+Minimum of 40% achieved in Final Exam (y/n)?
+Minimum of C- overall grade (y/n)?
+
+Student fails COMP500/ENSE501.
+
+
+
+
+#include <stdio.h>
+
+int main(void) {
+    char labAttendance;   
+    char finalExamScore;  
+    char overallGrade;    
+
+    printf("At least 80%% lab tutorial attendance (y/n)?\n");
+    scanf(" %c", &labAttendance);
+    
+    printf("Minimum of 40%% achieved in Final Exam (y/n)?\n");
+    scanf(" %c", &finalExamScore);
+    
+    printf("Minimum of C- overall grade (y/n)?\n");
+    scanf(" %c", &overallGrade);
+    
+    if (labAttendance == 'y' && finalExamScore == 'y' && overallGrade == 'y') {
+        printf("\nStudent passes COMP500/ENSE501.\n");
+    } else {
+        printf("\nStudent fails COMP500/ENSE501.\n");
+    }
+
+    return 0;  
+}
